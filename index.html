@@ -28,7 +28,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
       <form class="d-flex pe-5">
         <!-- Button trigger modal -->
-        <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#MyModal">Create a new post</button>
+        <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#MyModal">Create a new post</button>
         <div class="dropdown">
           <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
             <i class="bi bi-gear"></i>
@@ -47,33 +47,77 @@
     </div>
   </nav>
 
-  <ul class="nav justify-content-center">
-
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
-      
-
+  <ul class="nav nav-tabs justify-content-center border-0" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+     <button class="nav-link active fs-4 border-0 bg-transparent" id="galeria-tab" data-bs-toggle="tab" data-bs-target="#galeria" type="button" role="tab" aria-controls="galeria" aria-selected="true">
+      <i class="bi bi-grid-3x3-gap-fill"></i>
+     </button>
     </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link fs-4 border-0 bg-transparent" id="post-tab" data-bs-toggle="tab" data-bs-target="#post" type="button" role="tab" aria-controls="post" aria-selected="false">
+        <i class="bi bi-square-fill"></i>
+      </button>
+    </li>
+  </ul> 
 
 
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="galeria" role="tabpanel" aria-labelledby="galeria-tab">
+      <section>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img src="/assets/photo_8_2025-10-14_19-23-22.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">    
+            <img src="/assets/photo_9_2025-10-14_19-23-22.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img src="/assets/photo_5_2025-10-14_19-23-22.jpg" class="card-img" alt="...">
+          </div>
+        </div>    
+      </section>     
+      <section>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img src="/assets/photo_3_2025-10-14_19-23-22.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">    
+            <img src="/assets/photo_10_2025-10-14_19-23-22.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img src="/assets/photo_4_2025-10-14_19-23-22.jpg" class="card-img-top" alt="...">
+          </div>
+        </div>    
+      </section>      
+      <section>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img src="/assets/photo_11_2025-10-14_19-23-22.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">    
+            <img src="/assets/photo_12_2025-10-14_19-23-22.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img src="/assets/photo_6_2025-10-14_19-23-22.jpg" class="card-img-top" alt="...">
+          </div>
+        </div>    
+      </section> 
+    </div>
 
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-
+    <div class="tab-pane fade" id="post" role="tabpanel" aria-labelledby="post-tab">
       <div class="container">
         <div class="card mb-3">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-center">
               <h5 class="card-title">Ultimas vacaciones...</h5>
               <p>03/08</p>
-            </div>
-            <img src="/assets/postinstasemántico.jpg" class="card-img-top" alt="...">
-            <h6>Un monton de Likes</h6>
-            <p class="card-text">Qué maravilla, unas vacaciones inolvidables con buena compañia</p>
+            </div>  
+              <img src="/assets/postinstasemántico.jpg" class="card-img-top" alt="...">
+              <h6>Un monton de Likes</h6>
+              <p class="card-text">Qué maravilla, unas vacaciones inolvidables con buena compañia</p>
           </div>
         </div>
-      </div>
-      <div class="container">
+
         <div class="card mb-3">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-center">
@@ -85,8 +129,7 @@
             <p class="card-text">Iniciando un nuevo proyecto, duro, pero con muchas ganas de aprender</p>
           </div>
         </div>
-      </div>
-      <div class="container">
+      
         <div class="card mb-3">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-center">
@@ -99,8 +142,10 @@
           </div>
         </div>
       </div>
-    </li>
-  </ul>
+    </div> 
+   </div>  
+   
+  
 
 
 
@@ -124,8 +169,8 @@
               </label>
               <textarea class="form-control" id="message-text">Add the caption of your post here</textarea>
               <div class="mt-3 d-flex gap-2">
-                <button><i class="bi bi-camera fs-3""></i></button>
-                  <button><i class=" bi bi-crosshair fs-3""></i></button>
+                <button type="button" class="btn btn-light border"><i class="bi bi-camera-fill fs-4"></i></button>
+                <button type="button" class="btn btn-light border"><i class="bi bi-geo-alt-fill fs-4"></i></button>
               </div>
             </div>
           </form>
